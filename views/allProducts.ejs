@@ -16,7 +16,7 @@
         <div class="d-flex justify-content-between align-items-center mt-4">
            
             <form action="/allProducts" method="get" class="d-inline-block">
-                <select name="category" class="form-select" onchange="this.form.submit()">
+                <select name={categories} class="form-select" onchange="this.form.submit()">
                     <option selected value="">Categories</option>
                     <option value="">All Products</option>
                     <option value="Electronics">Electronics</option>
