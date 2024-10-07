@@ -1,5 +1,4 @@
-const PORT = 8000;
-
+const PORT = process.env.PORT || 8000;
 const express = require("express");
 const app = express();
 const path = require("path");
@@ -34,7 +33,7 @@ app.use("/cart",checkForAuthentication, cartProductsRoute)
 
 
 
-connectToMongoDB("mongodb://127.0.0.1:27017/myUser").then(()=>{
+connectToMongoDB(process.env.Mongo_DB_URI || "").then(()=>{
     console.log("Mongo db connected");
 });
 
