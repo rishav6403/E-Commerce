@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/stylesheets/home.css">
+    <title>E-Commerce</title>
+    <style>
+       
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand">
+                    <img src="https://thumbs.dreamstime.com/b/web-183282273.jpg" alt="logo" style="width:40px;" class="rounded-pill">
+                    E-Commerce
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <% if (role === "ADMIN") { %>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="/products">Add Products</a>
+                            </li>
+                        <% } %>
+                        <li class="nav-item">
+                            <a href="/allProducts" class="nav-link text-white">All Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/cart" class="nav-link text-white">Cart</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/logout" class="btn btn-danger nav-link text-white">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="hero-section">
+            <h1>Welcome to Our E-Commerce Site</h1>
+            <p>Discover the best products at unbeatable prices</p>
+        </div>
+    </header>
+
+    <main class="container mt-5">
+        <div class="row">
+            <% if (products && products.length > 0) { %>
+                <% products.forEach(product => { %>
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="card">
+                            <img src="<%= product.image %>" alt="<%= product.name %>" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h5 class="card-title"><%= product.name %></h5>
+                                <h3 class="card-text">$<%= product.price %></h3>
+                                <p class="description"><%= product.desc %></p>
+                                <p class="description">Category: <%= product.category %></p>
+                                <a class="btn btn-success btn-add-to-cart" href="/cart/<%= product._id %>">Add to cart</a>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                <% }) %>
+            <% } else { %>
+                <h1 class="text-center mt-5">No products found</h1>
+            <% } %>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+body {
+    background: linear-gradient(to right, #ece9e6, #ffffff);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+h1 {
+    margin-top: 20px;
+    color: #333;
+}
+
+.nav-link {
+    color: #333;
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+.btn-primary, .btn-warning, .btn-danger {
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-primary:hover, .btn-warning:hover, .btn-danger:hover {
+    transform: translateY(-2px);
+}
+
+.container a.nav-link.border {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container a.nav-link.border:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.card {
+    background-color: #fff;
+    border: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    height: 310px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-text {
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: #28a745;
+}
+
+.description {
+    color: #666;
+}
+
+select {
+    margin-left: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.form-select {
+    width: auto;
+    display: inline-block;
+}

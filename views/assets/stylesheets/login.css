@@ -1,0 +1,49 @@
+body {
+    height: 70vh;
+    background-image: url("../images/login\ \(2\).jpg");
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgb(112, 197, 236);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-left: -40%;
+    margin-top: 190px;
+    width: 400px;
+    height: 470px;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    color: white;
+    padding: 4px;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form label {
+    padding: 6px;
+}
+h2 a{
+    text-decoration: none;
+    color: red;
+
+}
