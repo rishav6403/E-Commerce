@@ -1,4 +1,3 @@
-const PORT = process.env.PORT || 8000;
 const express = require("express");
 const app = express();
 const path = require("path");
@@ -13,6 +12,8 @@ const cartProductsRoute = require("./routes/cart")
 const{restrictTo,checkForAuthentication} = require("./middleware/auth")
 const {connectToMongoDB} = require("./connections")
 
+const PORT = process.env.PORT || 8000;
+const mongoDbUri = process.env.Mongo_DB_URI || "mongodb://127.0.0.1"
 
 app.set("view engine", "ejs");
 app.set("views", path.resolve("./views"))
@@ -33,7 +34,7 @@ app.use("/cart",checkForAuthentication, cartProductsRoute)
 
 
 
-connectToMongoDB(process.env.Mongo_DB_URI || "").then(()=>{
+connectToMongoDB(mongoDbUri).then(()=>{
     console.log("Mongo db connected");
 });
 

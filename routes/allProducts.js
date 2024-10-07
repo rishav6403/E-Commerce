@@ -28,7 +28,7 @@ const storage = multer.diskStorage({
           return res.render("allProducts", {
               products: allproducts,
               role:allUsers,
-              categories,
+              
               
           });
       } catch (err) {
