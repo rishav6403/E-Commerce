@@ -1,21 +1,20 @@
 body {
-    height: 70vh;
+    height: 100vh;
     background-image: url('../images/signup5.jpg');
     background-position:center;
     background-size: cover;
     background-repeat: no-repeat;
-        display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
-
-div {
-   border: 2px solid black;
+div#signup{
+        backdrop-filter: blur(10px);
+    border: 2px solid black;
     border-radius: 10px;
-    margin-top: 180px;
-    margin-right: -32%;
-    height: 450px;
-    width: 380px;
+    margin-right: -37%;
+    height: 545px;
+    width: 38%;
 }
 
 button {
@@ -44,4 +43,32 @@ form label {
 h2 a{
     text-decoration: none;
     color: green;
+}
+
+
+/* responsive */
+@media screen and (min-width:1025px){
+    div#signup{
+        height: 605px
+    }
+}
+@media (min-width: 768px) and (max-width :1025px)  {
+   div#signup {
+    margin-top: 0 !important;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-right: -49%;
+    height: 605px;
+    width: 50%;
+}
+
+}
+@media (min-width:320px) and (max-width:767px){
+    div{
+        margin-top: 0;
+    }
+    div#signup{
+        margin-right: 0;
+        width: 80%;
+    }
 }
