@@ -1,5 +1,5 @@
 body {
-    height: 70vh;
+    height: 100vh;
     background-image: url("../images/login\ \(2\).jpg");
     background-position:center;
     background-size: cover;
@@ -8,14 +8,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
-div {
+div#login {
     border: 2px solid black;
     border-radius: 10px;
     margin-left: -40%;
-    margin-top: 190px;
-    width: 400px;
+    width: 40%;
     height: 470px;
 }
 
@@ -32,6 +32,12 @@ h1 {
     text-align: center;
 }
 
+    h2{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        }
+
 form {
     display: flex;
     flex-direction: column;
@@ -46,4 +52,24 @@ h2 a{
     text-decoration: none;
     color: red;
 
+}
+
+
+/* responsive */
+
+@media  (min-width:560px) and (max-width:768px)  {
+    h2{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    }
+    div#login{
+        width: 280px;
+    }
+}
+@media (min-width:320px) and (max-width:425px){
+    div#login {
+        backdrop-filter: blur(10px);
+        margin-left: 0;
+        width: 85%;
 }
