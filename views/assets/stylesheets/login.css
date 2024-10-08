@@ -57,7 +57,11 @@ h2 a{
 
 /* responsive */
 
-@media  (min-width:560px) and (max-width:768px)  {
+@media  (min-width:320px) and (max-width:767px)  {
+    div#login {
+        backdrop-filter: blur(10px);
+        margin-left: 0;
+        width: 85%;
     h2{
     text-align: center;
     display: flex;
@@ -67,9 +71,4 @@ h2 a{
         width: 280px;
     }
 }
-@media (min-width:320px) and (max-width:425px){
-    div#login {
-        backdrop-filter: blur(10px);
-        margin-left: 0;
-        width: 85%;
-}
+
