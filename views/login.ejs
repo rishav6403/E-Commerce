@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="container d-flex justify-content-center align-items-center overflow-hidden">
+    <div class="container d-flex justify-content-center align-items-center">
         <div id="login">
             <h1>Login</h1>
             <form action="/user/login" method="post">
@@ -19,8 +19,15 @@
                 <input type="email" required name="email"> <br>
                 <label>Password:</label>
                 <input type="password" required name="password">
-                <button type="submit" class="btn btn-success mt-5">Login</button>
-                <h2 class="mt-5">If not Signed in?<a href="/signup"> <span class="text-decoration-underline">Sign
+                <button type="submit" class="btn btn-success mt-3">Login</button>
+                <div class="alert alert-light border mt-2 d-flex flex-column">
+        <p class="mb-1"><strong>Demo Login:</strong></p>
+        <p class="mb-1"><strong>Email:</strong> Demo@ecommerce.com</p>
+        <p class="mb-3"><strong>Password:</strong> 12345678</p>
+       <a href="/user/guest-login" class="btn btn-outline-secondary mt-3">→ Continue as Guest</a>
+
+      </div>
+                <h2>If not Signed in?<a href="/signup"> <span class="text-decoration-underline">Sign
                             up</span></a></h2>
             </form>
         </div>
